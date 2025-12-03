@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Shahe Alam - QA Engineer</title>
+    <meta name="description" content="Md Shahe Alam - QA Engineer">
+    <meta name="author" content="Md Shahe Alam - QA Engineer">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .typed-cursor {
+            opacity: 1;
+            animation: typedjsBlink 0.7s infinite;
+        }
+        
+        @keyframes typedjsBlink {
+            50% { opacity: 0.0; }
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .portfolio-filter .hidden {
+            display: none;
+        }
+        
+        .portfolio-filter .block {
+            display: block;
+        }
+        
+        .progress-bar {
+            transition: width 0.6s ease;
+        }
+        
+        .active-filter {
+            color: #20c997 !important;
+            border-color: #20c997 !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-gray-900 z-50 flex items-center justify-center">
+        <div class="lds-ellipsis">
+            <div class="bg-teal-500"></div>
+            <div class="bg-teal-500"></div>
+            <div class="bg-teal-500"></div>
+            <div class="bg-teal-500"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 w-full z-40 bg-white shadow-md backdrop-blur-sm transition-all duration-300">
+    <nav class="container mx-auto px-4 py-2 flex justify-between items-center">
+
+        <!-- Text Branding Instead of Logo -->
+        <a href="#home" class="flex flex-col leading-tight">
+            <span class="text-xl font-bold text-gray-900">Md Shahe Alam</span>
+            <span class="text-sm text-teal-600 tracking-wide -mt-1">QA Engineer</span>
+        </a>
+
+        <!-- Navigation Menu -->
+        <div class="hidden md:flex space-x-8">
+            <a href="#home" class="text-gray-900 hover:text-teal-500 transition-colors">Home</a>
+            <a href="#about" class="text-gray-900 hover:text-teal-500 transition-colors">About</a>
+            <a href="#services" class="text-gray-900 hover:text-teal-500 transition-colors">Skill</a>
+            <a href="#resume" class="text-gray-900 hover:text-teal-500 transition-colors">Resume</a>
+            <a href="#portfolio" class="text-gray-900 hover:text-teal-500 transition-colors">Project</a>
+            <a href="#contact" class="text-gray-900 hover:text-teal-500 transition-colors">Contact</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="hidden md:flex space-x-4">
+            <a href="https://www.linkedin.com/in/md-shahe-alam-63a439315/" class="text-gray-700 hover:text-teal-500 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/bugs_catcher/" class="text-gray-700 hover:text-teal-500 transition-colors"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/shahealamit" class="text-gray-700 hover:text-teal-500 transition-colors"><i class="fab fa-github"></i></a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-gray-900">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-white py-3 px-4 hidden">
+        <div class="flex flex-col space-y-4">
+            <a href="#home" class="text-gray-900 hover:text-teal-500 transition-colors">Home</a>
+            <a href="#about" class="text-gray-900 hover:text-teal-500 transition-colors">About</a>
+            <a href="#services" class="text-gray-900 hover:text-teal-500 transition-colors">What I Do</a>
+            <a href="#resume" class="text-gray-900 hover:text-teal-500 transition-colors">Resume</a>
+            <a href="#portfolio" class="text-gray-900 hover:text-teal-500 transition-colors">Project</a>
+            <a href="#contact" class="text-gray-900 hover:text-teal-500 transition-colors">Contact</a>
+        </div>
+    </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">       
+         <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="video.mp4.mp4" type="video/mp4">
+    </video>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/70 z-10"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <p class="text-xl md:text-2xl font-medium text-white mb-2 md:mb-3">Welcome</p>
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-2 md:mb-3">
+                <span id="typed-text">I'm a QA Engineer</span><span class="typed-cursor">|</span>
+            </h2>
+            <!-- <p class="text-lg md:text-xl text-gray-300 mb-8">based in Los Angeles, California.</p> -->
+            <a href="#contact" class="inline-block border-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white px-6 py-3 rounded-full transition-colors duration-300">Hire Me</a>
+        </div>
+        
+        <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+    </section>
+
+   <!-- About Section -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<section id="about" class="py-20 bg-gray-800">
+  <div class="container mx-auto px-4">
+
+    <!-- Heading -->
+    <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-4xl font-bold text-white mb-4 relative inline-block">
+        About Me
+        <span
+          class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-teal-500 mt-2"
+        ></span>
+      </h2>
+      <p class="text-gray-400 text-lg">Know Me More</p>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left Column -->
+      <div data-aos="fade-right" data-aos-duration="1000">
+        <h2 class="text-3xl font-bold text-white mb-6">
+          I'm <span class="text-teal-500">Md Shahe Alam,</span> QA Engineer
+        </h2>
+
+        <div class="space-y-4 text-justify">
+          <p class="text-gray-300">
+            Detail-oriented Quality Assurance Engineer with 1.6 year of experience
+            in Automation and Manual Testing. Skilled in Selenium, Java, SQL, and
+            JIRA with proven ability to design and execute effective test plans,
+            identify defects, and improve testing efficiency.
+          </p>
+
+          <p class="text-gray-300">
+            Experienced in regression, functional, performance, and web Testing
+            across e-commerce, corporate, government, education, and healthcare
+            domains.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Column → Larger Image -->
+      <div class="flex items-center justify-center"
+           data-aos="fade-left"
+           data-aos-duration="1000"
+           data-aos-delay="200">
+
+        <img src="images/about.jpg"
+             alt="Md Shahe Alam"
+             class="w-80 h-80 object-cover rounded-2xl shadow-xl transform hover:scale-105 transition duration-300"/>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Include AOS JS before closing body tag -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+    
+   <section id="services" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-white mb-4 relative inline-block">
+                Skills
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-teal-500 mt-2"></span>
+            </h2>
+            <p class="text-gray-400 text-lg">What I Do?</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex space-x-6">
+                <div class="flex-shrink-0 w-14 h-14 bg-gray-800 rounded-full flex items-center justify-center text-teal-500 text-xl">
+                    <i class="fas fa-vials"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Testing Tools</h3>
+                    <p class="text-gray-400">Selenium WebDriver, JIRA, Cucumber, TestNG</p>
+                </div>
+            </div>
+            
+            <div class="flex space-x-6">
+                <div class="flex-shrink-0 w-14 h-14 bg-gray-800 rounded-full flex items-center justify-center text-teal-500 text-xl">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Programming</h3>
+                    <p class="text-gray-400">Java, SQL</p>
+                </div>
+            </div>
+            
+            <div class="flex space-x-6">
+                <div class="flex-shrink-0 w-14 h-14 bg-gray-800 rounded-full flex items-center justify-center text-teal-500 text-xl">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Testing Types</h3>
+                    <p class="text-gray-400">Manual, Automation, Regression, Functional, Performance</p>
+                </div>
+            </div>
+            
+            <div class="flex space-x-6">
+                <div class="flex-shrink-0 w-14 h-14 bg-gray-800 rounded-full flex items-center justify-center text-teal-500 text-xl">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Soft Skills</h3>
+                    <p class="text-gray-400">Problem-Solving, Analytical Thinking, Time Management, Self-motivated</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Resume Section -->
+   <section id="resume" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-white mb-4 relative inline-block">
+                Summary
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-teal-500 mt-2"></span>
+            </h2>
+            <p class="text-gray-400 text-lg">Resume</p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- My Education -->
+            <div>
+                <h2 class="text-2xl font-bold text-white mb-6">My Education</h2>
+                
+                <div class="bg-gray-900 rounded-lg p-6 mb-6">
+                    <span class="inline-block bg-red-500 text-white text-sm px-3 py-1 rounded-full mb-4">2021 - 2024</span>
+                    <h3 class="text-xl font-bold text-white mb-2">MCA - Master of Computer Application</h3>
+                    <p class="text-teal-400 mb-3">JIS College of Engineering</p>
+                    <p class="text-gray-400">Specialized in software development, database management and testing methodologies.</p>
+                </div>
+                
+                <div class="bg-gray-900 rounded-lg p-6">
+                    <span class="inline-block bg-red-500 text-white text-sm px-3 py-1 rounded-full mb-4">2017 - 2021</span>
+                    <h3 class="text-xl font-bold text-white mb-2">BCA - Bachelor of Computer Applications</h3>
+                    <p class="text-teal-400 mb-3">MMHAP University</p>
+                    <p class="text-gray-400">Focused on programming, web technologies and database systems.</p>
+                </div>
+            </div>
+            
+            <!-- My Experience -->
+            <div>
+                <h2 class="text-2xl font-bold text-white mb-6">My Experience</h2>
+                
+                <div class="bg-gray-900 rounded-lg p-6">
+                    <span class="inline-block bg-red-500 text-white text-sm px-3 py-1 rounded-full mb-4">Jul 2024 – Present</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Quality Engineer</h3>
+                    <p class="text-teal-400 mb-3">Redn Technologies – Patna, Bihar</p>
+                    <p class="text-gray-400 mb-2">Automated 40% of regression test cases using Selenium WebDriver &amp; TestNG, reducing testing cycle time by 30%.</p>
+                    <p class="text-gray-400 mb-2">Designed and executed manual and automated test cases for web and backend applications.</p>
+                    <p class="text-gray-400">Detected and logged 120+ defects using JIRA, improving bug resolution time by 20%.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold text-white mb-4 relative inline-block">
+                Certifications
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-gradient-to-r from-teal-400 to-teal-600 mt-3 rounded-full"></span>
+            </h2>
+            <p class="text-gray-300 text-xl mt-6">Validating my expertise through continuous learning</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Certification 1 -->
+            <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-400 to-teal-600"></div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="inline-block bg-gradient-to-r from-teal-500 to-teal-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">August 22, 2025</span>
+                        <div class="w-10 h-10 bg-gradient-to-r from-teal-500 to-teal-700 rounded-full flex items-center justify-center text-white shadow-lg">
+                            <i class="fas fa-robot text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 leading-tight">Learn GenAI Tools & AI Agents for Software Testing</h3>
+                    <div class="flex items-center mt-4 pt-4 border-t border-gray-700">
+                        <div class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-graduation-cap text-teal-400 text-sm"></i>
+                        </div>
+                        <p class="text-teal-400 font-medium">Udemy</p>
+                    </div>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            
+            <!-- Certification 2 -->
+            <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600"></div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="inline-block bg-gradient-to-r from-blue-500 to-blue-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">May 22, 2025</span>
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white shadow-lg">
+                            <i class="fab fa-java text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 leading-tight">Java (and Cucumber) for Automation Testing</h3>
+                    <div class="flex items-center mt-4 pt-4 border-t border-gray-700">
+                        <div class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-graduation-cap text-blue-400 text-sm"></i>
+                        </div>
+                        <p class="text-blue-400 font-medium">Udemy</p>
+                    </div>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            
+            <!-- Certification 3 -->
+            <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 to-purple-600"></div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="inline-block bg-gradient-to-r from-purple-500 to-purple-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">2024</span>
+                        <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center text-white shadow-lg">
+                            <i class="fas fa-vial text-lg"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 leading-tight">Automation Testing with Selenium WebDriver - Java</h3>
+                    <div class="flex items-center mt-4 pt-4 border-t border-gray-700">
+                        <div class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-graduation-cap text-purple-400 text-sm"></i>
+                        </div>
+                        <p class="text-purple-400 font-medium">Udemy</p>
+                    </div>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+        </div>
+    </section>
+
+   <!-- Portfolio Section (Clean — No Skill Section, No Skill Badges) -->
+<section id="portfolio" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+  <div class="container mx-auto px-4">
+    
+    <!-- Heading -->
+    <div class="text-center mb-10">
+      <h2 class="text-5xl font-bold text-white mb-3 relative inline-block">
+        Recent Projects
+        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-gradient-to-r from-teal-400 to-teal-600 mt-3 rounded-full"></span>
+      </h2>
+      <p class="text-gray-300 text-xl mt-4">A showcase of my testing expertise across different domains</p>
+    </div>
+
+    <!-- Filter Menu -->
+    <div class="flex justify-center space-x-6 mb-12">
+      <button class="filter-btn active-filter text-white bg-gradient-to-r from-teal-500 to-teal-700 rounded-full py-3 px-6 font-semibold shadow-lg transition-all duration-300 hover:scale-105" data-filter="*">
+        All Projects
+      </button>
+
+      <button class="filter-btn text-gray-300 bg-gray-800 rounded-full py-3 px-6 font-medium shadow-md transition-all duration-300 hover:bg-teal-900 hover:text-white hover:scale-105" data-filter=".automation">
+        Automation
+      </button>
+
+      <button class="filter-btn text-gray-300 bg-gray-800 rounded-full py-3 px-6 font-medium shadow-md transition-all duration-300 hover:bg-teal-900 hover:text-white hover:scale-105" data-filter=".manual">
+        Manual Testing
+      </button>
+
+      <button class="filter-btn text-gray-300 bg-gray-800 rounded-full py-3 px-6 font-medium shadow-md transition-all duration-300 hover:bg-teal-900 hover:text-white hover:scale-105" data-filter=".performance">
+        Performance
+      </button>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Corporate & IT Services -->
+      <div class="portfolio-item automation manual relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+        <div class="relative overflow-hidden">
+          <img src="images/project1.jpg" alt="Corporate & IT Services - redn.in" class="w-full h-64 object-cover transition-transform duration-700 hover:scale-110">
+          <div class="absolute top-4 right-4">
+            <span class="bg-gradient-to-r from-teal-500 to-teal-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Corporate & IT</span>
+          </div>
+        </div>
+
+        <div class="p-6">
+          <!-- <h3 class="text-white text-xl font-bold mb-3">Corporate & IT Services — redn.in</h3> -->
+
+          <p class="text-gray-300 text-sm">
+            I tested corporate service websites and internal IT-management tools, focusing on service request workflows, task tracking, and client data handling. I performed functional and regression testing, automated key flows, validated backend records, and ensured data consistency across modules. I also handled defect reporting and UI/UX validations to ensure a smooth and professional user experience.
+          </p>
+        </div>
+      </div>
+
+      <!-- E-commerce Applications -->
+      <div class="portfolio-item automation relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+        <div class="relative overflow-hidden">
+          <img src="images/project2.jpg" alt="E-commerce Applications" class="w-full h-64 object-cover transition-transform duration-700 hover:scale-110">
+          <div class="absolute top-4 right-4">
+            <span class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">E-commerce</span>
+          </div>
+        </div>
+
+        <div class="p-6">
+          <!-- <h3 class="text-white text-xl font-bold mb-3">E-commerce Applications — citybestmovers.com, zobhilo.com, clicktoquery.com</h3> -->
+
+          <p class="text-gray-300 text-sm">
+            I performed end-to-end testing of user account flows, product browsing, search and filters, cart operations, checkout processes, and secure online payments. I validated order data accuracy, payment success/failure cases, refunds, and backend updates. I also executed regression testing, cross-browser verification, error validation, and responsiveness testing to ensure a seamless shopping experience across all devices.
+          </p>
+        </div>
+      </div>
+
+      <!-- Government Service Portal -->
+      <div class="portfolio-item manual performance relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+        <div class="relative overflow-hidden">
+          <img src="images/project3.jpg" alt="Government Service Portal - rajgirsafari.bihar.gov.in" class="w-full h-64 object-cover transition-transform duration-700 hover:scale-110">
+          <div class="absolute top-4 right-4">
+            <span class="bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Government</span>
+          </div>
+        </div>
+
+        <div class="p-6">
+          <!-- <h3 class="text-white text-xl font-bold mb-3">Government Service Portal — rajgirsafari.bihar.gov.in</h3> -->
+
+          <p class="text-gray-300 text-sm">
+            I tested the complete safari booking workflow including slot selection, user inputs, payment gateway handling, confirmation steps, and ticket generation. I validated backend booking and payment records, ensured ticket accuracy, and checked refund scenarios. I also performed multilingual UI testing and responsiveness checks to ensure consistency across languages and devices.
+          </p>
+        </div>
+      </div>
+
+      <!-- Social & Community Platforms -->
+      <div class="portfolio-item manual relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+        <div class="relative overflow-hidden">
+          <img src="images/project4.jpg" alt="Social & Community Platforms" class="w-full h-64 object-cover transition-transform duration-700 hover:scale-110">
+          <div class="absolute top-4 right-4">
+            <span class="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Community</span>
+          </div>
+        </div>
+
+        <div class="p-6">
+          <!-- <h3 class="text-white text-xl font-bold mb-3">Social & Community Platforms — sahayogmitra.com, sahadevafoundation.com</h3> -->
+
+          <p class="text-gray-300 text-sm">
+            I tested donation processes, volunteer sign-ups, event creation, participant tracking, and backend synchronization of user data. I ensured that donation confirmations, volunteer records, and event updates matched accurately across the system. I also tested UI/UX flows for clarity and usability, ensuring smooth interaction for all user types.
+          </p>
+        </div>
+      </div>
+
+      <!-- Additional / Misc Projects -->
+      <div class="portfolio-item manual automation relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+        <div class="relative overflow-hidden">
+          <img src="images/project5.jpg" alt="Additional Projects" class="w-full h-64 object-cover transition-transform duration-700 hover:scale-110">
+          <div class="absolute top-4 right-4">
+            <span class="bg-gradient-to-r from-gray-600 to-gray-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Other</span>
+          </div>
+        </div>
+
+        <div class="p-6">
+          <!-- <h3 class="text-white text-xl font-bold mb-3">Additional Testing Engagements</h3> -->
+
+          <p class="text-gray-300 text-sm">
+            I worked on multiple short-term testing assignments involving smoke testing, regression cycles, release verification, bug triage, and hotfix validation. These projects strengthened my ability to deliver high-quality results under tight deadlines while coordinating closely with development and product teams.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Simple JS for filter behavior -->
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-filter'));
+        btn.classList.add('active-filter');
+
+        const filter = btn.getAttribute('data-filter');
+        const items = document.querySelectorAll('.portfolio-item');
+
+        items.forEach(it => {
+          if (filter === '*') {
+            it.style.display = 'block';
+          } else {
+            it.style.display = it.classList.contains(filter.replace('.', '')) ? 'block' : 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</section>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800">
+  <div class="container mx-auto px-4">
+
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-white mb-3 relative inline-block">
+        Contact
+        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-teal-500 mt-2"></span>
+      </h2>
+      <p class="text-gray-400 text-lg">Get in touch </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+
+      <!-- LEFT COLUMN — INFO CARDS -->
+      <div class="space-y-6">
+
+        <!-- Address -->
+        <div class="flex items-start gap-4 bg-gray-800 border border-gray-700 p-5 rounded-xl shadow-md">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-teal-500 to-teal-400 flex items-center justify-center text-white text-lg">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold">Location</h3>
+            <p class="text-gray-400">New Delhi, India</p>
+          </div>
+        </div>
+
+        <!-- Email -->
+<div class="flex items-start gap-4 bg-gray-800 border border-gray-700 p-5 rounded-xl shadow-md">
+  <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white text-lg">
+    <i class="fas fa-envelope"></i>
+  </div>
+  <div>
+    <h3 class="text-white font-semibold">Email</h3>
+    <a href="mailto:shahealam.it@gmail.com" class="text-teal-400 hover:underline">
+      shahealam.it@gmail.com
+    </a>
+  </div>
+</div>
+
+<!-- Phone -->
+<div class="flex items-start gap-4 bg-gray-800 border border-gray-700 p-5 rounded-xl shadow-md">
+  <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-teal-600 to-cyan-400 flex items-center justify-center text-white text-lg">
+    <i class="fas fa-phone-alt"></i>
+  </div>
+  <div>
+    <h3 class="text-white font-semibold">Phone</h3>
+    <a href="tel:+919939210737" class="text-gray-300 hover:underline">
+      +91-9939210737
+    </a>
+  </div>
+</div>
+
+
+      </div>
+
+
+      <!-- RIGHT COLUMN — CTA PANEL WITH FOLLOW ICONS -->
+      <div class="lg:col-span-2">
+        <div class="bg-gray-800/70 border border-gray-700 rounded-2xl p-8 lg:p-12 shadow-xl">
+
+          <h3 class="text-2xl font-bold text-white">Prefer Direct Communication?</h3>
+
+          <p class="text-gray-400 mt-2 max-w-2xl">
+            I'm available for freelance work, contract, or full-time roles. Reach out for collaborations,
+            test automation projects, or to discuss product quality improvements.
+          </p>
+
+          <!-- Badges -->
+          <div class="mt-6 flex flex-wrap gap-3">
+            
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-800 border border-gray-700 text-sm text-gray-300">
+              <i class="fas fa-briefcase text-teal-400"></i> Open to Work
+            </span>
+
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-800 border border-gray-700 text-sm text-gray-300">
+              <i class="fas fa-code-branch text-purple-400"></i> Automation & Manual
+            </span>
+
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-800 border border-gray-700 text-sm text-gray-300">
+              <i class="fas fa-clock text-yellow-400"></i> Response: Within 24 hrs
+            </span>
+
+          </div>
+
+          <!-- FOLLOW SECTION -->
+          <div class="mt-8">
+            <h4 class="text-white font-semibold mb-3">Follow</h4>
+
+            <div class="flex items-center gap-4">
+
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/bugs_catcher/" class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:bg-teal-500 hover:text-white transition">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/md-shahe-alam-63a439315/" class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:bg-teal-500 hover:text-white transition">
+                <i class="fab fa-linkedin-in text-xl"></i>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/shahealamit" class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:bg-teal-500 hover:text-white transition">
+                <i class="fab fa-github text-xl"></i>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+    <!-- Back to Top Button -->
+    <a href="#home" id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center text-white shadow-lg transition-opacity duration-300 opacity-0">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            document.getElementById('preloader').style.display = 'none';
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Typed.js Simulation
+        const typedText = document.getElementById('typed-text');
+        const texts = ["I'm a Freelancer", "I'm a QA Engineer"];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typedText.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedText.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                setTimeout(type, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, isDeleting ? 50 : 100);
+            }
+        }
+
+        // Start typing effect after page loads
+        setTimeout(type, 1000);
+
+        // Portfolio Filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active-filter'));
+                
+                // Add active class to clicked button
+                this.classList.add('active-filter');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === '*' || item.classList.contains(filterValue.substring(1))) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.opacity = '1';
+            } else {
+                backToTopButton.style.opacity = '0';
+            }
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
