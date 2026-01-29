@@ -89,120 +89,101 @@
   <!-- SERVICES -->
 <section id="services" class="py-24 relative bg-slate-950 overflow-hidden">
 
-    <!-- Soft Glow Background -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-        w-[800px] h-[400px] bg-teal-500/10 blur-[120px] rounded-full pointer-events-none">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
+    <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-teal-500/5 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/5 blur-[120px] rounded-full"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+    <div class="text-center mb-20">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-bold tracking-widest uppercase mb-4">
+        What I Offer
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">
+        DevOps Services in <span class="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">Patna</span>
+      </h2>
+
+      <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+        I streamline your development lifecycle with automation, secure cloud infrastructure, 
+        and production-ready DevOps practices tailored for modern businesses.
+      </p>
     </div>
 
-    <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <!-- Section Header -->
-        <div class="text-center mb-16">
-            <span class="text-teal-400 font-semibold tracking-wider text-sm uppercase">
-                What I Offer
-            </span>
-
-            <h2 class="text-3xl md:text-5xl font-bold text-white mt-3 mb-6">
-                DevOps Services in
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
-                    Patna
-                </span>
-            </h2>
-
-            <!-- SEO support -->
-            <p class="sr-only">
-                Professional DevOps services in Patna including CI/CD pipelines,
-                AWS cloud infrastructure, Docker containerization, and Linux automation.
-            </p>
-
-            <p class="text-slate-400 max-w-2xl mx-auto text-lg">
-                I streamline your development lifecycle with automation,
-                secure cloud infrastructure, and production-ready DevOps practices.
-            </p>
+      <div class="group relative bg-slate-900/40 backdrop-blur-md border border-slate-800/60 rounded-3xl p-8 hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(20,184,166,0.3)]">
+        <div class="w-12 h-12 bg-teal-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         </div>
+        <h3 class="text-xl font-bold text-white mb-4">CI/CD Pipelines</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          Automated build and test pipelines that help teams release faster with improved reliability.
+        </p>
+        <ul class="text-[13px] text-slate-300 space-y-3 mb-8">
+          <li class="flex items-center gap-2 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span> Jenkins & GitHub Actions</li>
+          <li class="flex items-center gap-2 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span> Testing & Validation</li>
+        </ul>
+        <a href="/jenkins-ci-cd.html" class="inline-flex items-center text-teal-400 font-bold text-xs tracking-widest uppercase hover:gap-2 transition-all">
+          Explore CI/CD <span class="ml-1">→</span>
+        </a>
+      </div>
 
-        <!-- Services Grid -->
-        <div class="grid md:grid-cols-3 gap-8">
-
-            <!-- CI/CD -->
-            <div class="group bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl p-8
-                hover:border-teal-500/50 hover:bg-slate-900/80 transition-all duration-300
-                hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(20,184,166,0.2)]">
-
-                <h3 class="text-xl font-bold text-white mb-4">
-                    CI/CD Pipelines
-                </h3>
-
-                <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                    Automated build, test, and deployment pipelines that help teams
-                    release faster with improved reliability.
-                </p>
-
-                <ul class="space-y-2 text-sm text-slate-300 mb-6">
-                    <li>• Jenkins & GitHub Actions</li>
-                    <li>• Automated Testing & Validation</li>
-                    <li>• Zero-Downtime Deployments</li>
-                </ul>
-
-                <a href="/#contact" class="text-teal-400 font-semibold text-sm hover:underline">
-                    Discuss CI/CD Setup →
-                </a>
-            </div>
-
-            <!-- AWS -->
-            <div class="group bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl p-8
-                hover:border-blue-500/50 hover:bg-slate-900/80 transition-all duration-300
-                hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)]">
-
-                <h3 class="text-xl font-bold text-white mb-4">
-                    AWS Cloud Infrastructure
-                </h3>
-
-                <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                    Scalable, secure, and cost-optimized AWS infrastructure for
-                    production workloads.
-                </p>
-
-                <ul class="space-y-2 text-sm text-slate-300 mb-6">
-                    <li>• EC2, S3, RDS & IAM Setup</li>
-                    <li>• VPC Networking & Security</li>
-                    <li>• Monitoring & Alerts</li>
-                </ul>
-
-                <a href="/#contact" class="text-blue-400 font-semibold text-sm hover:underline">
-                    Plan AWS Deployment →
-                </a>
-            </div>
-
-            <!-- Docker & Linux -->
-            <div class="group bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl p-8
-                hover:border-purple-500/50 hover:bg-slate-900/80 transition-all duration-300
-                hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(168,85,247,0.2)]">
-
-                <h3 class="text-xl font-bold text-white mb-4">
-                    Docker & Linux Automation
-                </h3>
-
-                <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                    Containerized deployments and Linux automation for
-                    consistent and stable environments.
-                </p>
-
-                <ul class="space-y-2 text-sm text-slate-300 mb-6">
-                    <li>• Docker & Docker Compose</li>
-                    <li>• Bash / Shell Scripting</li>
-                    <li>• Linux Server Hardening</li>
-                </ul>
-
-                <a href="/#contact" class="text-purple-400 font-semibold text-sm hover:underline">
-                    Optimize Infrastructure →
-                </a>
-            </div>
-
+      <div class="group relative bg-slate-900/40 backdrop-blur-md border border-slate-800/60 rounded-3xl p-8 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.3)]">
+        <div class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
         </div>
+        <h3 class="text-xl font-bold text-white mb-4">AWS Cloud</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          Scalable and cost-optimized AWS infrastructure designed for production-grade workloads.
+        </p>
+        <ul class="text-[13px] text-slate-300 space-y-3 mb-8">
+          <li class="flex items-center gap-2 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> EC2, S3, RDS & IAM</li>
+          <li class="flex items-center gap-2 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> VPC & Network Security</li>
+        </ul>
+        <a href="/aws-devops-engineer.html" class="inline-flex items-center text-blue-400 font-bold text-xs tracking-widest uppercase hover:gap-2 transition-all">
+          Explore AWS <span class="ml-1">→</span>
+        </a>
+      </div>
+
+      <div class="group relative bg-slate-900/40 backdrop-blur-md border border-slate-800/60 rounded-3xl p-8 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(168,85,247,0.3)]">
+        <div class="w-12 h-12 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-4">Docker Support</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          Containerized deployments for consistent environments across development and production.
+        </p>
+        <ul class="text-[13px] text-slate-300 space-y-3 mb-8">
+          <li class="flex items-center gap-2 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Docker & Orchestration</li>
+          <li class="flex items-center gap-2 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Container Optimization</li>
+        </ul>
+        <a href="/docker-containerization.html" class="inline-flex items-center text-purple-400 font-bold text-xs tracking-widest uppercase hover:gap-2 transition-all">
+          Explore Docker <span class="ml-1">→</span>
+        </a>
+      </div>
+
+      <div class="group relative bg-slate-900/40 backdrop-blur-md border border-slate-800/60 rounded-3xl p-8 hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.3)]">
+        <div class="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-4">Linux Automation</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          Automated server management, monitoring, and security hardening for cloud stability.
+        </p>
+        <ul class="text-[13px] text-slate-300 space-y-3 mb-8">
+          <li class="flex items-center gap-2 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Shell Scripting & Bash</li>
+          <li class="flex items-center gap-2 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Security & Hardening</li>
+        </ul>
+        <a href="/linux-cloud-automation.html" class="inline-flex items-center text-emerald-400 font-bold text-xs tracking-widest uppercase hover:gap-2 transition-all">
+          Explore Linux <span class="ml-1">→</span>
+        </a>
+      </div>
+
     </div>
+  </div>
 </section>
-
 
   <!-- FREELANCE SECTION (ANCHOR TARGET) -->
   <section id="freelance" class="py-24 bg-slate-900 border-y border-slate-800 relative overflow-hidden">
